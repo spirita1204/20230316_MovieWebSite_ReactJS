@@ -8,6 +8,7 @@ import Header from './components/header/Header';
 import Trailer from './components/trailer/Trailer';
 import Hero from './components/hero/Hero';
 import Reviews from './components/reviews/Reviews';
+import Login from './components/login/Login';
 
 function App() {
   console.log("app loading...");
@@ -50,7 +51,7 @@ function App() {
           <Route path='/' element={<Hero movies={movies} />}></Route>
           <Route path='/Trailer/:ytTrailerId' element={<Trailer />}></Route>
           <Route path="/Reviews/:movieId" element={<Reviews getMovieData={getMovieData} movie={movie} reviews={reviews} setReviews={setReviews} />}></Route>
-          
+          <Route path='/login' element={<Login/>} />
         </Route>
       </Routes>
     </div>

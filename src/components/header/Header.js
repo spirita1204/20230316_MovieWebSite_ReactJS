@@ -26,11 +26,9 @@ const Header = () => {
                         <NavLink className="nav-link" to="/">Home</NavLink>
                         <NavLink className="nav-link" to="/watchList">Watch List</NavLink>
                     </Nav>
-                    
-                        <Button variant="outline-info" className="me-2" onClick={() => Login}>Login</Button>
-                  
-                        <Button variant="outline-info">Register</Button>
-                
+                    <Link to='/login'>
+                        <Button variant="outline-info" className="me-2">Login</Button>
+                    </Link>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
