@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import Login from './components/login/Login';
 //import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -10,7 +11,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/*' element={ <App/> }/>
+        <Route path='/*' element={ <Login/> }/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
