@@ -9,6 +9,7 @@ import Trailer from './components/trailer/Trailer';
 import Hero from './components/hero/Hero';
 import Reviews from './components/reviews/Reviews';
 import Login from './components/login/Login';
+import Lobby from './components/lobby/Lobby';
 
 function App() {
   console.log("app loading...");
@@ -48,10 +49,11 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route path='/' element={<Hero movies={movies} />}></Route>
+          <Route path='/' element={<Lobby/>}></Route>
+          <Route path='/home' element={<Hero movies={movies} />}></Route>
           <Route path='/Trailer/:ytTrailerId' element={<Trailer />}></Route>
           <Route path="/Reviews/:movieId" element={<Reviews getMovieData={getMovieData} movie={movie} reviews={reviews} setReviews={setReviews} />}></Route>
-          <Route path='/login' element={<Login/>} />
+          <Route path='/login' element={<Login />} />
         </Route>
       </Routes>
     </div>

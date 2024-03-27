@@ -5,11 +5,12 @@ import Container from "react-bootstrap/Container"
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link, Switch } from "react-router-dom";
 import Login from "../login/Login";
+import { useState } from "react";
 
-const Header = () => {
-
+const Header = (isAuth) => {
+    console.log(isAuth+"yes");
     return (
         <Navbar bg="dark" variant="dark" expand="lg">
             <Container fluid>
@@ -23,7 +24,9 @@ const Header = () => {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <NavLink className="nav-link" to="/">Home</NavLink>
+                        {isAuth &&(
+                            <NavLink className="nav-link" to="/home">Home</NavLink>
+                            )}  
                         <NavLink className="nav-link" to="/watchList">Watch List</NavLink>
                     </Nav>
                     <Link to='/login'>
